@@ -2,7 +2,7 @@ module LogicUnit(input clk,input [2:0]operation,input [31:0]A, input [31:0]B, ou
 
     wire [31:0]cmp;
     wire [31:0]C;
-    twocmp tc (A,cmp);
+    BarrelShift BS(A, B[4:0],cmp);
 
     assign C = ~(|operation[2:0])?A & B:32'bz;                                  //000
     assign C = (operation[0] & ~(|operation[2:1]))?A ^ B:32'bz;                 //001
