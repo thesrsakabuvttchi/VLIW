@@ -62,4 +62,4 @@ The significane of blank lines here is that those packets consist of only no ops
 * WAR/WAW dependencies need to be accounted for (normal dependency graph would only solve RAW)
 * Whether units are free (the instruction may have no hazard preventing it, but the Funtional unit has already been occupied)
 
-The python script also goes on to convert the instructions into their opcodes and order them as expexted by the processor (First instruction of packet goes to adder, second to Multiplier and so on). This is then automatically written into a copy of the file Processor.v, compiled and run. Finally the output shows the registers when the value of any register (barring PC) changes.
+The python script also goes on to convert the instructions into their opcodes and order them as expexted by the processor (First instruction of packet goes to adder, second to Multiplier and so on). This is then automatically written into a copy of the file Processor.v, compiled and run. Finally the output shows the registers when the value of any register (barring Program Counter) changes.
